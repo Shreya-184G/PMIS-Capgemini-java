@@ -143,7 +143,7 @@ public class Main{
     }
 }
  */
-//Task : Ex.3]The Academy Admissions Portal
+//Problem Set 1] Ex. 2]The Academy Admissions Portal
 
 class StudentProfile{
     String fullName;
@@ -193,7 +193,8 @@ public class Main{
        s2.printReportCard();
     }
 }
-// Problem Set 2 :Ex.1] 
+// Problem Set 2 :Ex.1] Employee Management (Encapsulation & Constructors)
+
 /* class Employee{
     //Private fields (Encapsulation)
     private int id;
@@ -249,6 +250,8 @@ public class Main{
         System.out.println("Final Verified Salary: "+emp.getSalary());
     }
 } */
+//Problem Set 2 :Ex.2] Vehicle Toll System (Inheritance & Polymorphism)
+
 //Date : 09/10/2026 : Friday
 
 //[1] Single Inheritance
