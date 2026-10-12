@@ -1,5 +1,5 @@
 //Date: 08/10/2026 : Thursday
-class Car{
+/* class Car{
     String color;
     String Brand;
     int speed;
@@ -26,7 +26,7 @@ public class Main{
         c1.displayInfo();
         c1.accelerate(50);
     }
-}
+} */
 
 //Bank Management System
 //Ex.1] 1st way
