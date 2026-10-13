@@ -1,20 +1,4 @@
-
-/* 
-[1] ArithmeticException
-Trying to divide an integer by zero
-e.g. 10/0
-
-[2] NullPointerException
-Trying to access a method or field through null reference.
-String name = null;
-Calling an instance method on a null object(e.g. str.length() when str is null)
-Accessing or modifying a field of null object(e.g. user.name)
-Taking the length of a null array or accessing its slots.
-
-[3] ArrayIndexOutOfBoundsException
-Accessing an array index that doesn't exist.
-int[] nums = {1,2}; then nums[5]
-*/
+//Exception Handling in Java
 //Ex.1]
 /* public class ExceptionHandling {
     public static void main(String[] args) {
