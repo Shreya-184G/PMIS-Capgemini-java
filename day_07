@@ -1,1 +1,165 @@
 //12/10/2026 : Monday
+
+//Has-a relationship program
+//Ex.1]/*
+class Engine{
+    void start(){
+        System.out.println("Engine is starting...");
+    }
+}
+class Car{
+    private Engine engine;
+
+    Car(){
+        this.engine = new Engine();
+    }
+    void drive(){
+        engine.start();
+        System.out.println("Car is moving.");
+    }
+}
+
+*/
+
+//Ex.2]
+/* class Address{
+    String city;
+    String state;
+    int pincode;
+
+    Address(String city, String state, int pincode){
+        this.city = city;
+        this.state = state;
+        this.pincode = pincode;
+    }
+
+    void displayAddress(){
+        System.out.println("City:"+city+" , State: "+state+"  ,Pincode: "+pincode );
+    }
+}
+
+class Student{
+    String name;
+    int rollNumber;
+    Address address;
+
+    Student(String name, int rollNumber, Address address){
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.address = address;
+
+    }
+    void profileDetails(){
+        System.out.println("Name :" +name+" , Roll Number: "+rollNumber);
+        System.out.print("Lives at:");
+        address.displayAddress();
+    }
+} */
+
+//Ex.3]
+/* class Battery{
+   int capacity;
+
+   Battery(int capacity){
+    this.capacity = capacity;
+   }
+
+   void drain(){
+    System.out.println("Battery used.\n Capacity remaining: "+(capacity-100));
+   }
+}
+class Camera{
+  int pix;
+
+  Camera(int pix){
+    this.pix = pix;
+  }
+
+  void takePhoto(){
+    System.out.println("Click....captured a Photo with a "+pix+"sensor");
+  }
+}
+class Phone{
+    String brand;
+    Battery battery;
+    Camera camera;
+
+    Phone(String brand, Battery battery, Camera camera){
+        this.brand = brand;
+        this.battery = battery;
+        this.camera = camera;
+
+        void snapPicture(){
+            System.out.println("[" +brand+ "is active]");
+            camera.takePhoto();
+            battery.drain();
+        }
+    }
+}
+ */
+//static variable
+
+//Ex.1]
+/* class Student{
+    String name;
+    static String collegeName = "IIT Bombay";
+
+    Student(String name){
+        this.name = name;
+    }
+
+    void studentCollegeName(){
+        System.out.println(name+" studies in "+collegeName+".");
+    }
+} */
+//final variable
+
+/* class Bank{
+    final void calculateInterest(){
+        System.out.println("Base Interest Calculation.");
+    }
+
+}
+class Branch extends Bank{
+    void calculateInterest(){
+        System.out.println("Custom Interest.");
+    }
+} */
+
+//abstract keyword
+
+/* abstract class Shape{
+    private String color;
+    void setColor(String color){
+       this.color = color;
+    }
+
+    String getColor(){
+        return color;
+    }
+    abstract double calculateArea();
+}
+
+class Circle extends Shape{
+    double radius;
+    Circle(double radius){
+        this.radius = radius;
+    }
+    @Override
+    double calculateArea(double radius){
+        return (3.14)*radius*radius;
+    }
+}
+
+class Rectangle{
+    double length;
+    double breadth;
+
+    Rectangle(double length,double breadth){
+        this.length = length;
+        this.beadth = breadth;
+    }
+    double calculateArea(double length,double breadth){
+        return length*breadth;
+    }
+} */
