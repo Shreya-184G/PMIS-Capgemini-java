@@ -102,29 +102,104 @@ public class Main{
 } */
 //Super Keyword
 //refer demo.java for super use and this for its main; we are dividing this into two files
-//Ex.1]
-/* public class Main{
+//Ex.1]/*
+class Employee{
+    double salary = 30000;
+}
+class Manager extends Employee{
+    double salary = 60000;
+    void displaySalary(){
+        System.out.println("Manager Salary: "+salary);
+        System.out.println("Employee Salary: "+super.salary);
+    }
+}
+public class Main{
     public static void main(String[] args) {
         Manager m = new Manager();
         m.displaySalary();
     }
 } */
 //Ex.2]
-/* public class Main{
+/* 
+class Animal{
+    void eats(){
+        System.out.println("Animal eats.");
+    }
+}
+class Dog extends Animal{
+    void eats(){
+        System.out.println("Dog eats.");
+        super.eats();
+    }
+}
+public class Main{
     public static void main(String[] args) {
         Dog d = new Dog();
         d.eats();
     }
 } */
 //Ex.3] 
-/* public class Main{
+/* 
+class BankAccount{
+    String accountHolder;
+
+    BankAccount(String accountHolder) {
+        this.accountHolder = accountHolder;
+    }
+    void displayDetails(){
+        System.out.println("Accountholder Name: "+accountHolder);
+    }
+}
+class SavingsAccount extends BankAccount{
+    double interestRate = 4.5;
+
+    SavingsAccount(String accountHolder) {
+        super(accountHolder);
+    }
+    @Override 
+    void displayDetails(){
+        System.out.println("Interest Rate: "+interestRate+" %");
+        super.displayDetails();
+    }
+}
+public class Main{
     public static void main(String[] args) {
         SavingsAccount s1 = new SavingsAccount("Shreya");
         s1.displayDetails();
     }
 } */
 //Ex.4]
-/* public class Main{
+/*
+Problem statement:
+Create a Java program using inheritance with two classes: Animal and Dog.
+Requirements:
+1. Create a parent class Animal with:
+- A variable String name.
+- A method eat() that prints "Animal is eating".
+2. Create a child class Dog that extends Animal with:
+- A method bark() that prints "Dog is barking".
+3. In the main() method:
+- Create an object of Dog.
+- Assign "Tommy" to its name.
+- Print the dog's name.
+- Call both eat() and bark().
+ */
+
+/* class Animal{
+    String name;
+    void eat(){
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog extends Animal{
+    void bark(){
+        System.out.println("Dog is barking");
+        super.name = "Tommy";
+        System.out.println(name);
+    }
+}
+public class Main{
     public static void main(String[] args) {
         Dog d = new Dog();
         d.eat();
@@ -133,7 +208,58 @@ public class Main{
 } */
 
 //Ex.5]
-/* public class Main{
+/* 
+Practice question: Employee and Manager 🧑‍💻
+Problem statement:
+Create a Java program with a parent class Employee and a child class Manager.
+1. Parent class: Employee
+- Variables: String name and double salary.
+- Create a constructor that initializes both variables.
+- Create a method displayDetails() that prints the employee's name and salary.
+2. Child class: Manager
+- Inherit from Employee.
+- Add a variable String department.
+- Create a constructor that accepts name, salary, and department.
+- Use super() to initialize the parent's variables.
+- Override displayDetails() to display the employee details, department, and the message "Role: Manager".
+- Use super.displayDetails() instead of printing the name and salary again.
+3. Main class
+Create a Manager object with these values:
+- Name: "Anish"
+- Salary: 50000
+- Department: "IT"
+Call displayDetails(). */
+
+/* class Employee{
+    String name;
+    double salary;
+
+    Employee(String name, double salary){
+        this.name = name;
+        this.salary = salary;
+    }
+    void displayDetails(){
+        System.out.println("Employee's name: "+name+" | Salary: "+salary);
+    }
+
+}
+class Manager extends Employee{
+    String department;
+    Manager(String name,double salary, String department){
+        this.name = name;
+        this.salary = salary;
+        this.department = department;
+    }
+    super.name = "Shreya";
+    super.salary = 100000.00;
+    super.department = "IT";
+    @Override 
+    void displayDetails(){
+        System.out.println("Employee Name: "+name+ " | Employee salary: "+salary+ " | Employee Department: "+department);
+        super.displayDetails();
+    }
+}
+public class Main{
     public static void main(String[] args) {
         Manager m = new Manager("Shreya",100000.00,"Electronics");
         m.displayDetails();
