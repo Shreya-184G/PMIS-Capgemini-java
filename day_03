@@ -44,7 +44,7 @@
         }
     }
 } */
-//Ex.] To print inverted triangle
+//Ex.4] To print inverted triangle
 
 /* public class PatternPrinting{
     public static void main(String[] args) {
@@ -58,7 +58,7 @@
     }
 } */
 
-//Ex.] 
+//Ex.5] 
 
 /* public class PatternPrinting{
     public static void main(String[] args) {
@@ -78,7 +78,7 @@
     }
 }
  */
-//Ex.]
+//Ex.6]
 /* 1            row =1
 12              row =2           n
 123             row = 3
@@ -95,6 +95,7 @@
         }
     }
 } */
+//Ex.7]
 /* public class PatternPrinting{
     public static void main(String[] args) {
         int n = 5;
@@ -106,6 +107,7 @@
         }
     }
 } */
+//Ex.8]
 /* public class PatternPrinting{
     public static void main(String[] args) {
         int n = 5;
@@ -117,6 +119,7 @@
         }
     }
 } */
+//EX.9]
 /* public class PatternPrinting{
     public static void main(String[] args) {
         int n=4;
@@ -133,7 +136,7 @@
     }
 } */
 
-//Calculator to print Area
+//Switch-case example : Calculator to print Area
 
 import java.util.Scanner;
 
