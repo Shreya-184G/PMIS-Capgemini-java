@@ -60,8 +60,103 @@ public class Practice{
         sc.close();
     }
 } */
+/*
+//Ex.5] 
+public class Month{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the choice: ");
+        int choice = sc.nextInt();
+        switch(choice){
+            case 1: System.out.println("January");
+            case 2: System.out.println("February");
+            case 3: System.out.println("March");
+            case 4: System.out.println("April");
+            case 5: System.out.println("May");
+            case 6: System.out.println("June");
+            case 7: System.out.println("July");
+            case 8: System.out.println("August");
+            case 9: System.out.println("September");
+            case 10: System.out.println("October");
+            case 11: System.out.println("November");
+            case 12: System.out.println("December");
+            default: System.out.println("Invalid choice");
+        }
+    }
+} */
+//Ex.6] Swap the values of two integer variables without using any auxiliary variable(or third variable).
 
-//Ex.5] Convert the temperature given in Fahrenheit into Celsius using: c = (r-32)*5/9
+/* import java.util.Scanner;
+
+public class SwapVariables{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        a = a+b;
+        b = a-b;
+        a = a-b;
+
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+ */
+//Ex.7] Convert a total number of seconds into minutes, hours and remaining seconds
+
+/* import java.util.Scanner;
+
+public class Seconds{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of total no. of seconds: ");
+        float sec = sc.nextInt();
+        float min = sec/60;
+        System.out.println("The time in minutes for given seconds is: "+min);
+
+        float hrs = sec/3600;
+        System.out.println("The time in hours for given seconds is: "+hrs);
+
+    }
+} */
+//Ex.8] Find the largest number among three numbers
+
+/* import java.util.Scanner;
+
+public class LargestNumber{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int num3 = sc.nextInt();
+
+        if(num1 > num2 && num1 > num3){
+            System.out.println(num1+" is largest.");
+        }else if(num2 > num1 && num2 > num3){
+            System.out.println(num2+" is largest");
+        }else{
+            System.out.println(num3+" is largest");
+        }
+    }
+} */
+//Ex.10] Leap year or not
+/* import java.util.*;
+
+public class LeapYear{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int year = sc.nextInt();
+        
+        if(( year % 400 == 0) || (year % 4 == 0 && year % 100 != 0 )){
+            System.out.println("Leap Year");
+        }else{
+            System.out.println("Not a Leap Year");
+        }
+    }
+} */
+
+//Ex.11] Convert the temperature given in Fahrenheit into Celsius using: c = (r-32)*5/9
 
 /* import java.util.*;
 
