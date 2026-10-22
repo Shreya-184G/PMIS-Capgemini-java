@@ -1,1 +1,143 @@
+//Date : 09/10/2026 : Friday
+
+//[1] Single Inheritance
+/* class Animal{
+    void eat(){
+        System.out.println("This Animal eats Food.");
+    }
+}
+class Dog extends Animal{
+    void bark(){
+        System.out.println("The Dog barks.");
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.eat();
+        myDog.bark();
+    }
+}
+ */
+//[2] Multi-level Inheritance
+
+/* class ElectronicDevices{
+    void poweron(){
+        System.out.println("Device power on.");
+    }
+}
+// Child Class 1
+class MobilePhone extends ElectronicDevices{
+    void makecall(){
+        System.out.println("Make a call.");
+    }
+}
+//Child Class 2
+class SmartPhone extends MobilePhone{
+    void browse(){
+        System.out.println("Browse Data.");
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        SmartPhone samsung = new SmartPhone();
+        samsung.makecall();
+        samsung.browse();
+        samsung.poweron();
+    }
+} */
+
+//[3] Hierarchical Inheritance
+//common parent class
+/* class Shape{
+    String color = "Blue";
+}
+//child class 1
+class Circle extends Shape{
+    void drawCircle(){
+        System.out.println("Draw a "+color+ " Circle.");
+    }
+}
+
+class Rectangle extends Shape{
+    void drawRectangle(){
+        System.out.println("Draw a "+color+" Rectangle.");
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Circle c1 = new Circle();
+        Rectangle r1 = new Rectangle();
+        c1.drawCircle();
+        r1.drawRectangle();
+    }
+} */
+//[4] Multiple Inheritance Issue : Resolution is Interfaces
+
+/* interface Mother{
+    void message();
+}
+interface Father{
+    void message();
+}
+
+class Child implements Mother,Father{
+    @Override 
+    public void message(){
+        System.out.println("Grateful to Mom and Dad!");
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.message();
+        Mother m = new Child();
+        c.message();
+        Father f = new Child();
+        f.message();
+    }
+} */
+//Super Keyword
+//refer demo.java for super use and this for its main; we are dividing this into two files
+//Ex.1]
+/* public class Main{
+    public static void main(String[] args) {
+        Manager m = new Manager();
+        m.displaySalary();
+    }
+} */
+//Ex.2]
+/* public class Main{
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eats();
+    }
+} */
+//Ex.3] 
+/* public class Main{
+    public static void main(String[] args) {
+        SavingsAccount s1 = new SavingsAccount("Shreya");
+        s1.displayDetails();
+    }
+} */
+//Ex.4]
+/* public class Main{
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+} */
+
+//Ex.5]
+/* public class Main{
+    public static void main(String[] args) {
+        Manager m = new Manager("Shreya",100000.00,"Electronics");
+        m.displayDetails();
+    }
+} 
+ */
 
