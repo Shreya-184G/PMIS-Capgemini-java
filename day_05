@@ -1,1 +1,349 @@
-//08/10/2026 : Tuesday
+//Date: 08/10/2026 : Thursday
+/* class Car{
+    String color;
+    String Brand;
+    int speed;
+
+    Car(String color, String Brand,int speed){
+        this.color = color;
+        this.Brand = Brand;
+        this.speed = speed;
+    }
+
+    void displayInfo(){
+        System.out.println("Color: "+color+ ", Brand: "+Brand+ ", speed: "+speed+" Km/hr");
+    }
+    void accelerate(int incr){
+        int incrementedSpeed = incr;
+        speed += incrementedSpeed;
+
+        System.out.println("Increased Speed is :"+speed+" Km/hr");
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        Car c1 = new Car("Blue","BMW",360);
+        c1.displayInfo();
+        c1.accelerate(50);
+    }
+} */
+//Bank Management System
+//Ex.1] 1st way
+/* import java.util.Scanner;
+
+class Bank{
+    int deposit, withdraw;
+    void deposit(int balance,int deposit){
+        this.deposit = deposit;
+        if(balance<10000){
+            System.out.println("NEED TO DEPOSIT SOME AMOUNT.CANNOT WITHDRAW");
+            int totalAmount = balance + deposit;
+            System.out.println("Amount after deposit: "+totalAmount);
+        }
+    }
+    void withdraw(int balance,int withdraw){
+        this.withdraw = withdraw;
+        if(balance>10000){
+            System.out.println("CAN WITHDRAW AMOUNT.");
+            int remainingAmount = balance + withdraw;
+            System.out.println("Amount after withdraw: "+remainingAmount);
+        }
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int balance = sc.nextInt();
+        Bank b1 = new Bank();
+        b1.deposit(balance,5000);
+        b1.withdraw(balance,5000);
+        sc.close();
+    }
+} */
+//Ex.1] 2nd way
+
+/* class BankAccount{
+    String accountHolder;
+    double balance;
+
+    BankAccount(String accountHolder , double balance){
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+    }
+
+    void deposit(double amount){
+        balance += amount;
+        System.out.println("Deposited Amount: "+amount);
+        System.out.println("Balance after deposit: "+balance);
+    }
+    void withdraw(double amount){
+        if(balance>amount){
+            balance-=amount;
+            System.out.println("Amount withdrawn: "+amount);
+            System.out.println("Balance after withdraw: "+balance);
+        }else{
+            System.out.println("Insufficient Balance .Given Amount cannot be withdrawn.");
+        }
+    }
+    void displayInfo(String accountHolder, double balance){
+        System.out.println("AccountHolder name : "+accountHolder);
+        System.out.println("Account Balance: "+balance);
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        BankAccount b1 = new BankAccount("Shreya",100000);
+        BankAccount b2 = new BankAccount("Aarya",250000);
+        b1.deposit(50000);
+        b2.withdraw(50000);
+        b1.displayInfo("Shreya",100000);
+    }
+} */
+//Problem Set 1 : Ex.1]The Campus Coffee Cart Wallet
+
+/* class CoffeeWallet{
+    String customerName;
+    double balance;
+
+    CoffeeWallet(String customerName, double balance){
+        this.customerName = customerName;
+        this.balance = balance;
+    }
+    void addFunds(double amount){
+        balance += amount;
+        System.out.println("Added Rs.: "+amount);
+        System.out.println("Balance: "+balance);
+    }
+    void purchase(double amount){
+        if(amount>balance){
+            balance-= amount;
+            System.out.println("Purchase Successful!");
+            System.out.println("Amount deducted: "+amount);
+            System.out.println("Balance: "+balance);
+        }else{
+            System.out.println("Insufficient Balance!");
+        }
+        void displayInfo(){
+            System.out.println("Customer Name: "+customerName+" | Balance: "+balance);
+        }
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        CoffeeWallet c1 = new CoffeeWallet("Shreya",10000);
+        c1.displayInfo();
+        c1.addFunds(200);
+        c1.purchase(150); 
+        c1.purchase(amount:800);
+        c1.displayInfo();
+        
+    }
+}
+ */
+//Problem set 1 : Ex.2]The Academy Admissions Portal
+
+/* class StudentProfile{
+    String fullName;
+    int studentID;
+    double finalScore;
+
+    StudentProfile(String fullName, int studentID, double finalScore){
+       //Entrance exam takers
+       this.fullName = fullName;
+       this.studentID = studentID;
+       this.finalScore = finalScore;
+    }
+
+    StudentProfile(String fullName, int studentID ){
+       //Direct Walk-ins
+       this.fullName = fullName;
+       this.studentID = studentID;
+       this.finalScore = 0.0;
+    }
+
+    char getGrade(){
+        if(finalScore>=90){
+            return 'A';
+        }else if(finalScore>=75){
+            return 'B';
+        }else if(finalScore>=50){
+            return 'C';
+        }else{
+            return 'F';
+        }
+    }
+    void printReportCard(){
+        System.out.println("Name: "+fullName);
+        System.out.println("Student ID: "+studentID);
+        System.out.println("Final Score: "+finalScore);
+        System.out.println("Grade: "+getGrade());
+        System.out.println("------------------------");
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+       //Exam taker
+       StudentProfile s1 = new StudentProfile("Shreya",1,94.00);
+       //Walk-ins
+       StudentProfile s2 = new StudentProfile("Null",2);
+       s1.printReportCard();
+       s2.printReportCard();
+    }
+]
+} */
+// Problem Set 2 :Ex.1] Employee Management (Encapsulation & Constructors)
+
+/* class Employee{
+    //Private fields (Encapsulation)
+    private int id;
+    private String name;
+    private double salary;
+    //Getters
+    public Employee(int id,String name, double salary){
+        this.id = id;
+        this.name = name;
+        if(salary >=0){
+            this.salary = salary;
+        }else{
+            this.salary = 0.0;
+        }
+    }
+    //3.Getters
+    public int getId(){
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
+    public double getSalary(){
+        return salary;
+    }
+    //4.Setter with validation
+    public void setSalary(double salary){
+        if(salary>=0){
+            this.salary = salary;
+        }else{
+            System.out.println("Error: Salary cannot be negative.");
+        }
+    }
+    //5.Business Logic Method
+    public void giveRaise(double percent){
+        if(percent > 0){
+            double raiseAmount = this.salary * (percent / 100.0);
+            this.salary += raiseAmount;
+            System.out.println(name+" received a "+percent+" % raise. New Salary: Rs. "+this.salary);
+        }else{
+            System.out.println("Raise percentage must be positive");
+        }  
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Employee emp = new Employee(101,"Shreya",1200000.00);
+        System.out.println("Initial Salary: "+emp.getSalary());
+        //Apply raise
+        emp.giveRaise(8);
+        emp.setSalary(-25000);
+        //Final check
+        System.out.println("Final Verified Salary: "+emp.getSalary());
+    }
+} */
+//Problem Set 2 :Ex.2] Vehicle Toll System (Inheritance & Polymorphism)
+
+/* //1. Base Class
+class Vehicle{
+    protected String registrationNumber;
+
+    public Vehicle(String registrationNumber){
+        this.registrationNumber = registrationNumber;
+    }
+
+    public double calculateToll(){
+        return 50.0; //Base Toll
+    }
+
+    public String getRegistrationNumber(){
+        return registrationNumber;
+    }
+}
+//2. Child Class 1 : Car
+
+class Car extends Vehicle{
+    public Car(String registrationNumber){
+        super(registrationNumber); //Calls Vehicle's constructor
+    }
+    @Override 
+    public double calculateToll(){
+        return 50.0 + 20.0; //Flat Toll for cars = 70.0
+    }
+}
+
+//Child Class 2: Truck
+
+class Truck extends Vehicle{
+    private int axles;
+
+    public Truck(String registrationNumber, int axles){
+        super(registrationNumber);
+        this.axles = axles;
+    }
+    @Override 
+    public double calculateToll(){
+        return 100.0 + (axles * 50.0);//Base + per axle charge
+    }
+}
+//4. Test Runner
+
+public class Main{
+    public static void main(String[] args) {
+        Vehicle car = new Car("MH-04-SG-1234");
+        Vehicle truck = new Truck("MH-11-PQ-1804",4);
+
+        System.out.println("Vehicle: "+car.getRegistrationNumber()+" | Toll Due: Rs. "+car.calculateToll());
+        System.out.println("Vehicle: "+truck.getRegistrationNumber()+" | Toll Due: Rs. "+truck.calculateToll());
+    }
+} 
+    Time Complexity: O(1) and Space Complexity: O(1)
+    */
+
+//Homework :
+//Ex.1] Abstraction
+
+/* abstract class PaymentGateway{
+    void printReceipt(){
+        System.out.println("Receipt generated.");
+    }
+    abstract void processPayment(double amount);
+}
+
+class UPIPayment extends PaymentGateway{
+    @Override
+    void processPayment(double amount){
+        System.out.println("Processing Rs.: "+amount+ " via UPI QR Code");
+    }
+}
+
+class CreditCardPayment extends PaymentGateway{
+    @Override 
+    void processPayment(double amount){
+        System.out.println("Processing Rs.: "+amount+" via Card Swipe and OTP.");
+    }
+}
+
+public class Abstraction{
+    public static void main(String[] args) {
+        PaymentGateway payment = new UPIPayment();
+        payment.processPayment(100.00);
+        payment.printReceipt();
+        PaymentGateway payment1 = new CreditCardPayment();
+        payment1.processPayment(100.00);
+        payment1.printReceipt();
+    }
+} 
+
+//Time Complexity: O(1) and Space Complexity: O(1)
+*/
+//Ex.2] Encapsulation
+
