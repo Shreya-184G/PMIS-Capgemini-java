@@ -140,7 +140,7 @@ public class LargestNumber{
         }
     }
 } */
-//Ex.10] Leap year or not
+//Ex.9] Leap year or not
 /* import java.util.*;
 
 public class LeapYear{
@@ -156,7 +156,7 @@ public class LeapYear{
     }
 } */
 
-//Ex.11] Convert the temperature given in Fahrenheit into Celsius using: c = (r-32)*5/9
+//Ex.10] Convert the temperature given in Fahrenheit into Celsius using: c = (r-32)*5/9
 
 /* import java.util.*;
 
