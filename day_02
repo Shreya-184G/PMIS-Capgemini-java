@@ -1,6 +1,8 @@
 05/10/2026 : Monday
 
-/*import java.util.*;
+/*
+//Ex.1]
+import java.util.*;
 
 public class Loops{
     public static void main(String[] args) {
@@ -10,7 +12,8 @@ public class Loops{
     }
 }*/
 
-/* Sum of n natural numbers :
+/*
+//Ex.2] Sum of n natural numbers :
 public class Loops{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -26,7 +29,7 @@ public class Loops{
 }
 */
 
-//Print the table of number input by the user
+//Ex.3] Print the table of number input by the user
 /* 
 public class Loops{
     public static void main(String[]args){
@@ -40,3 +43,34 @@ public class Loops{
     }
 }
 */
+
+//Ex.4] Write a program to read  two integers and print their sum as a floating point value.
+
+/* import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of number1: ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of number2: ");
+        int b = sc.nextInt();
+        float sum = a + b;
+        System.out.println("The Sum of "+a+" and "+b+"is: " +sum);
+        sc.close();
+    }
+} */
+
+//Ex.5] Convert the temperature given in Fahrenheit into Celsius using: c = (r-32)*5/9
+
+/* import java.util.*;
+
+public class Temperature{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        float f = sc.nextFloat();
+        float c = (f-32)*5/9;
+        System.out.println("The Temperature in Celsius is: "+c);
+        sc.close();
+    }
+} */
