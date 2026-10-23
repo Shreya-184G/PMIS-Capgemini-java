@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS bankdb;
+
+USE bankdb;
+
+CREATE TABLE IF NOT EXISTS accounts (
+    account_no INT PRIMARY KEY AUTO_INCREMENT,
+    holder_name VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    balance DECIMAL(12,2) NOT NULL DEFAULT 0.00
+);
+
+SELECT * FROM accounts;
