@@ -9,7 +9,7 @@ public class BankManagementSystem {
     static final String USER = "root";
 
     // Replace with your MySQL password
-    static final String PASSWORD = "SoftwareDatabase13,";
+    static final String PASSWORD = "MySQLpassword";
 
     static Scanner sc = new Scanner(System.in);
 
